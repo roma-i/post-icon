@@ -1,8 +1,8 @@
 <?php 
 /*
 
-Plugin Name: Post Icon
-Plugin URI:  https://github.com/roma-i/post-icon.git
+Plugin Name: Post Title Icon
+Plugin URI:  https://#
 Description: Plugin for adding icons to posts titles
 Version:     1.0
 Author:      Roman I
@@ -28,19 +28,10 @@ function pic_admin_submenu() {
 //Register settings
 add_action( 'admin_init', 'pic_plugin_settings' );
 function pic_plugin_settings() {
-	register_setting( 'pic-plugin-settings-group', 'pic_posts_id', 'pic_sanitize_settings' );
-	register_setting( 'pic-plugin-settings-group', 'pic_icon_class', 'pic_sanitize_settings' );
-	register_setting( 'pic-plugin-settings-group', 'pic_active_checkbox', 'pic_sanitize_settings' );
-	register_setting( 'pic-plugin-settings-group', 'pic_position', 'pic_sanitize_settings' );
-}
-
-//Settings sanitize
-function pic_sanitize_settings( $input ) {
-	$input['pic_posts_id'] = sanitize_text_field( $input['pic_posts_id'] );
-	$input['pic_icon_class'] = sanitize_text_field( $input['pic_icon_class'] );
-	$input['pic_active_checkbox'] = ( $input['pic_active_checkbox'] == 'on' ) ? 'on' : '';
-	$input['pic_position'] = sanitize_option( 'pic_position', 'left' );
-	return $input;
+	register_setting( 'pic-plugin-settings-group', 'pic_posts_id' );
+	register_setting( 'pic-plugin-settings-group', 'pic_icon_class' );
+	register_setting( 'pic-plugin-settings-group', 'pic_active_checkbox' );
+	register_setting( 'pic-plugin-settings-group', 'pic_position' );
 }
 
 //Generate plugin settings page in WP Admin Panel
