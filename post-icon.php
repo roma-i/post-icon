@@ -2,7 +2,7 @@
 /*
 
 Plugin Name: Post Title Icon
-Plugin URI:  https://#
+Plugin URI:  https://github.com/roma-i/post-icon.git
 Description: Plugin for adding icons to posts titles
 Version:     1.0
 Author:      Roman I
